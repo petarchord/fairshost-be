@@ -1,0 +1,17 @@
+{
+  "socketURL": "/",
+  "dirPath": "/",
+  "homePage": "../RTCMultiConnectionClient/index.html",
+  "socketMessageEvent": "RTCMultiConnection-Message",
+  "socketCustomEvent": "RTCMultiConnection-Custom-Message",
+  "port": "9001",
+  "enableLogs": "true",
+  "autoRebootServerOnFailure": "false",
+  "isUseHTTPs": "false",
+  "sslKey": "./keys/privatekey.pem",
+  "sslCert": "./keys/certificate.pem",
+  "sslCabundle": "",
+  "enableAdmin": "false",
+  "adminUserName": "username",
+  "adminPassword": "password"
+}
