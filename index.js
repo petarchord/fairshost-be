@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 var server = http.createServer(app);
 var io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://fairshost-fe.herokuapp.com/",
     credentials: true,
   },
 });
