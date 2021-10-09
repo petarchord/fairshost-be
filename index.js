@@ -1,5 +1,6 @@
-const fs = require("fs");
-const https = require("https");
+// const fs = require("fs");
+const http = require("http");
+// const https = require("https");
 require("https").globalAgent.options.rejectUnauthorized = false;
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
@@ -14,12 +15,12 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-const options = {
-  key: fs.readFileSync("keys/privatekey.pem"),
-  cert: fs.readFileSync("keys/certificate.pem"),
-};
+// const options = {
+//   key: fs.readFileSync("keys/privatekey.pem"),
+//   cert: fs.readFileSync("keys/certificate.pem"),
+// };
 
-var server = https.createServer(options, app);
+var server = http.createServer(app);
 var io = require("socket.io")(server, {
   cors: {
     origin: "http://localhost:3000",
