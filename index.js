@@ -18,7 +18,6 @@ const options = {
   key: fs.readFileSync("keys/privatekey.pem"),
   cert: fs.readFileSync("keys/certificate.pem"),
 };
-var serverPort = 9001;
 
 var server = https.createServer(options, app);
 var io = require("socket.io")(server, {
@@ -38,6 +37,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(serverPort, function () {
-  console.log("server is up and running at %s port", serverPort);
+server.listen(process.env.PORT || 9001, function () {
+  console.log("server is up and running at %s port", process.env.PORT || 9001);
 });
