@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 
 const corsOptions = {
-  origin: "https://fairshost-fe.herokuapp.com/",
+  origin: "https://fairshost-fe.herokuapp.com",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
   credentials: true,
 };
@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 var server = http.createServer(app);
 var io = require("socket.io")(server, {
   cors: {
-    origin: "https://fairshost-fe.herokuapp.com/",
+    origin: "https://fairshost-fe.herokuapp.com",
     credentials: true,
   },
 });
